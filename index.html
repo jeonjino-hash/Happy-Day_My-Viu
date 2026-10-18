@@ -59,6 +59,33 @@ button:active{transform:scale(.95)}
   </div>
   <div id="err" role="alert"></div>
 </section>
+  <!-- شاشة القفل -->
+<div id="lock-screen">
+  <div class="lock-card">
+    <h2>لـ توتو فقط 🫐🦋</h2>
+    <div class="hint">السن اللي عرفتك فيه و السن اللي عرفتيني فيه بالترتيب 🌚</div>
+    <input type="password" id="pass" placeholder="****" maxlength="4">
+    <button onclick="checkPass()">افتحي يا عشرينية 💖</button>
+    <div id="error">الباسوورد غلط يا توتو، جربي تاني 🌚</div>
+  </div>
+</div>
+
+<script>
+function checkPass(){
+  let p = document.getElementById("pass").value.trim();
+  if(p === "1719" || p === "١٧١٩"){
+    document.getElementById("lock-screen").style.display="none";
+    document.getElementById("main-site").style.display="block";
+  } else {
+    document.getElementById("error").style.display="block";
+  }
+}
+
+// تفتح لما تدوسي Enter
+document.getElementById("pass").addEventListener("keypress", function(e){
+  if(e.key === "Enter"){ checkPass(); }
+});
+</script>
 <div id="main">
   <section class="top">
     <div class="num">20</div>
