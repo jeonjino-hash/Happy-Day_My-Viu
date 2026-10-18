@@ -76,6 +76,20 @@
     <button onclick="checkPass()">افتحي يا عشرينية 💖</button>
     <div id="error">الباسوورد غلط يا توتو، جربي تاني 🌚</div>
   </div>
+<script>
+function check(){
+  let code = document.getElementById("pass").value;
+  if(code === "1719"){
+    document.getElementById("lock").style.display = "none";
+    document.getElementById("site").style.display = "block";
+  } else {
+    document.getElementById("error").style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
 </div>
 
 <div id="main-site">
